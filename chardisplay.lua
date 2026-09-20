@@ -75,6 +75,7 @@ function events.CHAR_TYPED(c)
     if not isTyping then return end
     if not host:isHost() then return end
     local chatText = host:getChatText()
+    if not chatText then return end
     if chatText:find("^/") then
         return
     else
